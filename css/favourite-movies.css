@@ -6,3 +6,12 @@
 a, a:visited, a::after, a::before {
 	text-decoration: none;
 }
+
+.home-link {
+	border: none;
+}
+
+.favourite-movies-link {
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid yellow;
+}
