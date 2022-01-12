@@ -6,3 +6,7 @@
 a, a:visited, a::after, a::before {
 	text-decoration: none;
 }
+
+.home-link {
+	border: none;
+}

@@ -22,9 +22,9 @@
       </div>
 
       <div class="logo">
-				<a href="/">
+	<a href="/">
         	<i class="fa-brands fa-imdb"></i>
-				</a>
+	</a>
       </div>
 
       <div class="link favourite-movies-link">
@@ -32,7 +32,7 @@
       </div>
     </nav>
 
-    <div class="search-box">
+    <div id="search-box">
       <input
         id="search"
         type="text"
@@ -44,7 +44,47 @@
       <i class="fa-solid fa-magnifying-glass"></i>
     </div>
 
-    <ul id="list-of-movies"></ul>
+    <ul id="list-of-movies">
+	<li class="movie-card">
+		<div class="movie-card-left">
+			<img class="movie-card-img" src="./images/dummy-poster.jpeg" alt="">
+			<div class="movie-card-name-year">
+				<p class="movie-card-name">Movie</p>
+				<p class="movie-card-year">(2019)</p>
+				<a href="/pages/movies.html">
+					<button class="btn read-more-btn">Read More ></button>
+				</a>
+			</div>
+		</div>
+		<button class="btn add-to-favourites-btn">Add to Favourites</button>
+	</li>
+	<li class="movie-card">
+		<div class="movie-card-left">
+			<img class="movie-card-img" src="./images/dummy-poster.jpeg" alt="">
+			<div class="movie-card-name-year">
+				<p class="movie-card-name">Movie</p>
+				<p class="movie-card-year">(2019)</p>
+				<a href="/pages/movies.html">
+					<button class="btn read-more-btn">Read More ></button>
+				</a>
+			</div>
+		</div>
+		<button class="btn add-to-favourites-btn">Add to Favourites</button>
+	</li>
+	<li class="movie-card">
+		<div class="movie-card-left">
+			<img class="movie-card-img" src="./images/dummy-poster.jpeg" alt="">
+			<div class="movie-card-name-year">
+				<p class="movie-card-name">Movie</p>
+				<p class="movie-card-year">(2019)</p>
+				<a href="/pages/movies.html">
+					<button class="btn read-more-btn">Read More ></button>
+				</a>
+			</div>
+		</div>
+		<button class="btn add-to-favourites-btn">Add to Favourites</button>
+	</li>
+    </ul>
 
     <script src="./index.js"></script>
   </body>

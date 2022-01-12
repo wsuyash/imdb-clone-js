@@ -1,13 +1,16 @@
 const API = 'http://www.omdbapi.com/?apikey=bd2e447b&s=';
 
-/* handleSearch = async () => {
-	let query = document.getElementById('search').value;
+let moviesArray = ['hello', 'hi'];
 
-	let response;
-	if (query.length > 5) {
-		response = await fetch(API + query).then(response => response.json());
-	}
-	console.log(response);
+handleSearch = async () => {
+//	let query = document.getElementById('search').value;
+
+//	let response;
+//	if (query.length > 5) {
+//		response = await fetch(API + query).then(response => response.json());
+//	}
+//	console.log(response);
+//
 // 	{Search: Array(10), totalResults: '831', Response: 'True'}
 // Response: "True"
 // Search: Array(10)
@@ -26,4 +29,4 @@ const API = 'http://www.omdbapi.com/?apikey=bd2e447b&s=';
 // totalResults: "831"
 // [[Prototype]]: Object
 
-} */
+}
