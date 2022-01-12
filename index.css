@@ -13,6 +13,10 @@ ul {
 	list-style-type: none;
 }
 
+input {
+	outline: none;
+}
+
 body {
 	width: 100vw;
 	height: 100vh;
@@ -134,9 +138,7 @@ nav {
 }
 
 .movie-card-year {
-	margin-top: -30%;
 	font-size: small;
-	color: grey;
 }
 
 .btn {
