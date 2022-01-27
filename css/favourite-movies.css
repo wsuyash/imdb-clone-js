@@ -1,17 +1,17 @@
 * {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a, a:visited, a::after, a::before {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .home-link {
-	border: none;
+  border: none;
 }
 
 .favourite-movies-link {
-	padding-bottom: 0.5rem;
-	border-bottom: 2px solid yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid yellow;
 }

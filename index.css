@@ -1,167 +1,169 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 a, a:visited, a::after, a::before {
-	text-decoration: none;
-	color: black;
+  text-decoration: none;
+  color: black;
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 input {
-	outline: none;
+  outline: none;
 }
 
 body {
-	width: 100vw;
-	height: 100vh;
-	overflow: hidden;
-	background-color: #f5d020;
-	background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5d020;
+  background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
 }
 
 nav {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 4rem;
-	background-color: black;
-	color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  background-color: black;
+  color: white;
 }
 
 .link {
-	text-align: center;
-	width: 12rem;
+  text-align: center;
+  width: 12rem;
 }
 
 .link a{
-	color: white;
-	font-size: 24px;
+  color: white;
+  font-size: 24px;
 }
 
 .home-link {
-	padding-bottom: 0.5rem;
-	border-bottom: 2px solid yellow;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid yellow;
 }
 
 .fa-imdb {
-	color: yellow;
-	font-size: 64px;
+  color: yellow;
+  font-size: 64px;
 }
 
 #search-box {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 60vw;
-	margin: auto;
-	margin-top: 8rem;
-	position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin: auto;
+  margin-top: 8rem;
+  position: relative;
 }
 
 #search {
-	width: 100%;
-	padding: 0.5rem 1rem;
-	font-size: 24px;
-	border-radius: 10px;
-	border: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
 }
 
 .fa-magnifying-glass {
-	position: absolute;
-	right: 2%;
-	font-size: 24px;
-	color: #f53803;
+  position: absolute;
+  right: 2%;
+  font-size: 24px;
+  color: #f53803;
 }
 
 #list-of-movies {
-	width: 60vw;
-	height: 70vh;
-	margin: 1rem auto;
-	overflow: scroll;
-	/* border: 1px solid black; */
+  width: 60vw;
+  height: 70vh;
+  margin: 1rem auto;
+  overflow: scroll;
+  /* border: 1px solid black; */
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 #list-of-movies::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 #list-of-movies {
-	-ms-overflow-style: none;  /* IE and Edge */
-  	scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .movie-card {
-	list-style-type: none;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	height: auto;
-	padding: 1rem;
-	background-color: whitesmoke;
-	border-bottom: 1px solid grey;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: whitesmoke;
+  border-bottom: 1px solid grey;
 }
 
 .movie-card-left {
-	display: flex;
-	gap: 1rem;
+  display: flex;
+  gap: 1rem;
 
 }
 
 .movie-card-img {
-	display: inline-block;
-	width: 5rem;	
-	height: 100%;
-	transform: scale(1.15);
+  display: inline-block;
+  width: 5rem;	
+  height: 100%;
+  transform: scale(1.15);
 }
 
 .movie-card-name-year {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	gap: 0.5rem;
-	padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .movie-card-name {
-	font-size: large;
-	font-weight: bold;
+  font-size: large;
+  font-weight: bold;
 }
 
 .movie-card-year {
-	font-size: small;
+  font-size: small;
 }
 
 .btn {
-	color: white;
-	background-color: #0039a6;
-	cursor: pointer;
-	border: none;
+  color: white;
+  background-color: #0039a6;
+  cursor: pointer;
+  border: none;
 }
 
 .btn:hover {
-	background-color: #f53803;
-	color: black;
-	background-color: #f5d020;
+  background-color: #f53803;
+  color: black;
+  background-color: #f5d020;
 }
 
 .read-more-btn {
-	padding: 0.2rem;
-	font-size: 0.8rem;
-	border-radius: 5px;
+  width: 6rem;
+  height: 2rem;
+  padding: 0.2rem;
+  font-size: 0.8rem;
+  border-radius: 5px;
 }
 
 .add-to-favourites-btn {
-	padding: 1rem 1rem;
-	font-size: 1rem;
-	border-radius: 10px;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
 }
