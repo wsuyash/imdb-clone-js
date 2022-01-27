@@ -19,7 +19,6 @@ a, a:visited, a::after, a::before {
   height: 60vh;
   margin: auto;
   margin-top: 5rem;
-  border: 1px solid black;
 }
 
 #movie-info-left {
@@ -30,14 +29,33 @@ a, a:visited, a::after, a::before {
 }
 
 #movie-info-poster {
-  width: 100%;
+  max-width: 50%;
   height: 100%;
 }
 
 #movie-info-text {
+  align-self: flex-start;
   color: white;
+}
+
+#movie-info-year {
+  color: wheat;
+}
+
+#movie-info-plot {
+  font-size: 24px;
+  margin-top: 10rem;
+}
+
+#movie-info-right {
+  align-self: flex-end;
 }
 
 .add-to-favourites-btn {
   width: 10rem;
+}
+
+.add-to-favourites-btn:hover {
+  color: white;
+  background-color: #f53803;
 }

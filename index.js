@@ -1,16 +1,14 @@
 const API = 'http://www.omdbapi.com/?apikey=bd2e447b&s=';
 
-let moviesArray = ['hello', 'hi'];
-
 handleSearch = async () => {
   let query = document.getElementById('search').value;
 
   let response;
   if (query.length >= 2) {
-    response = await fetch(API + query).then(response => response.json());
+    response = await fetch(API + query, {
+      method: 'GET',
+    }).then(response => response.json());
   }
-
-  console.log(response);
   
   if (response !== undefined && response.Response) {
     for (let i = 0; i < response.Search.length; i++) {
@@ -37,4 +35,4 @@ handleSearch = async () => {
     }
   }
 }
-document.getElementById('search').addEventListener('input', handleSearch);
+document.getElementById('search').addEventListener('change', handleSearch);

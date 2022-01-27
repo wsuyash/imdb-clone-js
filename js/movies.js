@@ -1,19 +1,20 @@
 const API = 'http://www.omdbapi.com/?apikey=bd2e447b&i=';
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const movieID = urlParams.get('id');
-
-let response;
 getMovie = async () => {
-  response = await fetch(API + movieID).then(response => response.json());
-  console.log(response);
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const movieID = urlParams.get('id');
+  let response = await fetch(API + movieID, {
+    method: 'GET',
+  }).then(response => response.json());
 
-  if (response.Poster !== "N/A") {
-    document.getElementById('movie-info-poster').setAttribute('src', response.Poster);
+  if (response !== undefined && response.Response) {
+    if (response.Poster !== "N/A") {
+      document.getElementById('movie-info-poster').setAttribute('src', response.Poster);
+    }
+    document.getElementById('movie-info-name').innerHTML = response.Title;
+    document.getElementById('movie-info-year').innerHTML = "(" + response.Year + ")";
+    document.getElementById('movie-info-plot').innerHTML = response.Plot;
   }
-
-
-
 }
-getMovie();
+window.addEventListener('load', getMovie);

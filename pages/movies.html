@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../index.css">
   <link rel="stylesheet" href="../css/movies.css">
 </head>
-<body>
+<body onload="getMovie">
   <nav>
     <div class="link home-link">
       <a href="/">Home</a>
@@ -30,7 +30,7 @@
     </div>
   
     <div class="link favourite-movies-link">
-      <a href="/pages/favorite-movies.html">Favourite Movies</a>
+      <a href="/pages/favorite-movies.html">Favourites</a>
     </div>
   </nav>
 
@@ -38,7 +38,7 @@
     <div id="movie-info-left">
       <img id="movie-info-poster" src="../images/Image-Not-Available.png" alt="movie poster">
       <div id="movie-info-text">
-	<p id="movie-info-name"></p>
+	<h2 id="movie-info-name"></h2>
 	<p id="movie-info-year"></p>
 	<p id="movie-info-plot"></p>
       </div>
