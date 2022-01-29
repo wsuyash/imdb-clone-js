@@ -22,10 +22,15 @@ saveToFavs = (e) => {
 }
 
 handleSearch = async () => {
+  const listOfMoviesContainer = document.getElementById('list-of-movies');
+  while (listOfMoviesContainer.lastChild) {
+    listOfMoviesContainer.removeChild(listOfMoviesContainer.lastChild);
+  }
+
   let query = document.getElementById('search').value;
 
   let response = [];
-  if (query.length >= 2) {
+  if (query.length >= 1) {
     response = await fetch(API + query).then(response => response.json());
   }
   
@@ -45,12 +50,10 @@ handleSearch = async () => {
 	    </a>
       	  </div>
       	</div>
-      	<button class="btn add-to-favourites-btn">Add to Favourites</button>
+	<button class="btn add-to-favourites-btn">Add to Favourites</button>
       `;
       movieCard.innerHTML = html;
-      
-      const listOfMoviesContainer = document.getElementById('list-of-movies');
-      listOfMoviesContainer.prepend(movieCard);
+      listOfMoviesContainer.append(movieCard);
     }
   }
 
