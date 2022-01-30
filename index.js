@@ -6,7 +6,7 @@ saveToFavs = (e) => {
   let parentLi = e.target.parentElement;
 
   let id = parentLi.id;
-  let poster = "." + parentLi.firstElementChild.firstElementChild.getAttribute('src');
+  let poster = parentLi.firstElementChild.firstElementChild.getAttribute('src');
   let title = parentLi.firstElementChild.children[1].firstElementChild.innerText;
   let year = parentLi.firstElementChild.children[1].children[1].innerText;
 
@@ -42,7 +42,7 @@ handleSearch = async () => {
       movieCard.setAttribute('id', response.Search[i].imdbID);
       let html = `
       	<div class="movie-card-left">
-	  <img class="movie-card-img" src=${response.Search[i].Poster === "N/A" ? "./images/Image-Not-Available.png" : response.Search[i].Poster} alt="">
+	  <img class="movie-card-img" src=${response.Search[i].Poster === "N/A" ? "../images/Image-Not-Available.png" : response.Search[i].Poster} alt="">
       	  <div class="movie-card-name-year">
 	    <p class="movie-card-name">${response.Search[i].Title}</p>
       	    <p class="movie-card-year">(${response.Search[i].Year})</p>
