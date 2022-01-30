@@ -11,6 +11,9 @@ getMovie = async () => {
   }).then(response => response.json());
 
   if (response !== undefined && response.Response) {
+    if (favMovies.find((movie) => { return movie.id === movieID })) {
+      document.getElementById('add-to-fav-btn').style.display = "none";
+    }
     if (response.Poster !== "N/A") {
       document.getElementById('movie-info-poster').setAttribute('src', response.Poster);
     }
@@ -18,20 +21,6 @@ getMovie = async () => {
     document.getElementById('movie-info-year').innerHTML = "(" + response.Year + ")";
     document.getElementById('movie-info-plot').innerHTML = response.Plot;
     document.getElementById('movie-info-rating').innerHTML = response.imdbRating;
-    /* if (favMovies.find((movie) => { return movie.id === movieID })) {
-      document.getElementById('add-to-fav-btn').remove();
-    } */
-
-    if (favMovies.find((movie) => { return movie.id !== movieID })) {
-      let container = document.getElementById('movie-info-right');
-      let button = document.createElement('button');
-      button.innerHTML = "Add To Favourites";
-      button.setAttribute('id', 'add-to-fav-btn');
-      button.setAttribute('class', "btn add-to-favourites-btn");
-      container.append(button);
-    } else {
-      document.getElementById('add-to-fav-btn').remove();
-    }
   }
 }
 window.addEventListener('load', getMovie);
@@ -48,11 +37,15 @@ saveToFavs = (e) => {
     year: document.getElementById('movie-info-year').innerHTML,
   };
 
+  if (movie.title === "") {
+    return;
+  }
+
   favMovies.push(movie);
   localStorage.setItem("fav_movies", JSON.stringify(favMovies));
   e.target.remove();
 }
 
 if (document.getElementById('add-to-fav-btn') !== null) {
-  document.getElementById('add-to-fav-btn').addEventListener('click', saveToFavs);
+  document.getElementById('movie-info-right').lastElementChild.addEventListener('click', saveToFavs);
 }
