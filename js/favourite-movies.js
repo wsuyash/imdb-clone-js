@@ -14,7 +14,7 @@ displayFavs = () => {
       movieCard.setAttribute('id', favMovies[movie].id);
       let html = `
 	  <div class="movie-card-left">
-	  <img class="movie-card-img" src=${favMovies[movie].poster} alt="">
+	  <img class="movie-card-img" src=${favMovies[movie].poster === "N/A" ? "../images/Image-Not-Available.png" : favMovies[movie].poster} alt="movie poster">
 	    <div class="movie-card-name-year">
 	    <p class="movie-card-name">${favMovies[movie].title}</p>
 	      <p class="movie-card-year">${favMovies[movie].year}</p>
@@ -53,7 +53,6 @@ if (document.getElementById('list-of-fav-movies').hasChildNodes()) {
   let removeFromFavBtns = document.getElementsByClassName('remove-from-favourites-btn');
 
   for (let i = 0; i < removeFromFavBtns.length; i++) {
-    // removeFromFavBtns[i].addEventListener('click', removeFromFavs);
     removeFromFavBtns[i].addEventListener('click', removeFromFavs);
   }
 }
