@@ -19,6 +19,7 @@ saveToFavs = (e) => {
 
   favMovies.push(movie);
   localStorage.setItem("fav_movies", JSON.stringify(favMovies));
+  e.target.remove();
 }
 
 handleSearch = async () => {
@@ -50,7 +51,9 @@ handleSearch = async () => {
 	    </a>
       	  </div>
       	</div>
-	<button class="btn add-to-favourites-btn">Add to Favourites</button>
+	${favMovies.find((movie) => {
+	  return movie.id === response.Search[i].imdbID;
+	}) ? '' : `<button class="btn add-to-favourites-btn">Add to Favourites</button>`}
       `;
       movieCard.innerHTML = html;
       listOfMoviesContainer.append(movieCard);
