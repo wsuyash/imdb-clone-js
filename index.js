@@ -1,4 +1,4 @@
-const API = 'http://www.omdbapi.com/?apikey=bd2e447b&s=';
+const API = 'https://www.omdbapi.com/?apikey=bd2e447b&s=';
 
 let favMovies = JSON.parse(localStorage.getItem("fav_movies")) || [];
 
