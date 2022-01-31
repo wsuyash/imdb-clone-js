@@ -1,3 +1,4 @@
+/* Universal styles */
 * {
   margin: 0;
   box-sizing: border-box;
@@ -7,10 +8,12 @@ a, a:visited, a::after, a::before {
   text-decoration: none;
 }
 
+/* Navbar Home link */
 .home-link {
   border: none;
 }
 
+/* Movie info container */
 #movie-info {
   display: flex;
   justify-content: space-between;
@@ -18,12 +21,10 @@ a, a:visited, a::after, a::before {
   max-width: 90vw;
   margin: 5rem auto;
 }
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 #movie-info::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 #movie-info {
   -ms-overflow-style: none;  /* IE and Edge */
@@ -37,20 +38,24 @@ a, a:visited, a::after, a::before {
   gap: 1rem;
 }
 
+/* Movie poster */
 #movie-info-poster {
   max-width: 50%;
   height: 100%;
 }
 
+/* Movie info text container */
 #movie-info-text {
   align-self: flex-start;
   color: white;
 }
 
+/* Movie year */
 #movie-info-year {
   color: wheat;
 }
 
+/* Movie plot */
 #movie-info-plot {
   font-size: 24px;
   margin-top: 10rem;
@@ -63,6 +68,7 @@ a, a:visited, a::after, a::before {
   align-items: center;
 }
 
+/* Movie rating */
 #movie-info-rating {
   display: flex;
   justify-content: center;
@@ -75,19 +81,21 @@ a, a:visited, a::after, a::before {
   border-radius: 10px;
 }
 
+/* Add To Favourites Button */
 .add-to-favourites-btn {
   width: 10rem;
 }
 
+/* Add To Favourites Button on hover */
 .add-to-favourites-btn:hover {
   color: white;
   background-color: #f53803;
 }
 
 /* Media queries for responsive design */
-
 @media screen and (max-width: 1000px) {
 
+  /* Movie info container */
   #movie-info {
     flex-direction: column; 
     justify-content: center;
@@ -100,10 +108,12 @@ a, a:visited, a::after, a::before {
     align-items: center;
   }
 
+  /* Movie year */
   #movie-info-year {
     font-size: 14px;
   }
 
+  /* Movie plot */
   #movie-info-plot {
     font-size: 16px;
     margin-top: 1rem;
@@ -118,6 +128,7 @@ a, a:visited, a::after, a::before {
 
 @media screen and (max-height: 600px) {
 	
+  /* body */
   body {
     overflow: scroll;
   }

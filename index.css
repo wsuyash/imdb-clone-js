@@ -1,3 +1,4 @@
+/* Universal styles */
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +18,7 @@ input {
   outline: none;
 }
 
+/* body */
 body {
   width: 100vw;
   height: 100vh;
@@ -25,6 +27,7 @@ body {
   background-image: linear-gradient(315deg, #f5d020 0%, #f53803 74%);
 }
 
+/* Navbar */
 nav {
   position: fixed;
   top: 0;
@@ -38,26 +41,31 @@ nav {
   color: white;
 }
 
+/* Links container in the Navbar */
 .link {
   text-align: center;
   width: 12rem;
 }
 
+/* Links in the Navbar */
 .link a{
   color: white;
   font-size: 24px;
 }
 
+/* Home link */
 .home-link {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid yellow;
 }
 
+/* Logo */
 .fa-imdb {
   color: yellow;
   font-size: 64px;
 }
 
+/* Search container */
 #search-box {
   display: flex;
   justify-content: space-between;
@@ -68,6 +76,7 @@ nav {
   position: relative;
 }
 
+/* Search input field */
 #search {
   width: 100%;
   padding: 0.5rem 1rem;
@@ -76,6 +85,7 @@ nav {
   border: none;
 }
 
+/* Search logo */
 .fa-magnifying-glass {
   position: absolute;
   right: 2%;
@@ -83,26 +93,25 @@ nav {
   color: #f53803;
 }
 
+/* List of movies on search */
 #list-of-movies {
   width: 60vw;
   height: 70vh;
   top: 64px;
   margin: 1rem auto;
   overflow: scroll;
-  /* border: 1px solid black; */
 }
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 #list-of-movies::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 #list-of-movies {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
+/* Individual movie info container */
 .movie-card {
   list-style-type: none;
   display: flex;
@@ -118,9 +127,9 @@ nav {
 .movie-card-left {
   display: flex;
   gap: 1rem;
-
 }
 
+/* Movie poster */
 .movie-card-img {
   display: inline-block;
   width: 5rem;	
@@ -128,6 +137,7 @@ nav {
   transform: scale(1.15);
 }
 
+/* Movie text info container */
 .movie-card-name-year {
   display: flex;
   flex-direction: column;
@@ -136,15 +146,18 @@ nav {
   padding: 1rem;
 }
 
+/* Movie name */
 .movie-card-name {
   font-size: large;
   font-weight: bold;
 }
 
+/* Movie year */
 .movie-card-year {
   font-size: small;
 }
 
+/* Button */
 .btn {
   color: white;
   background-color: #0039a6;
@@ -152,12 +165,14 @@ nav {
   border: none;
 }
 
+/* Button on hover */
 .btn:hover {
   background-color: #f53803;
   color: black;
   background-color: #f5d020;
 }
 
+/* Read More Button */
 .read-more-btn {
   width: 6rem;
   height: 2rem;
@@ -166,6 +181,7 @@ nav {
   border-radius: 5px;
 }
 
+/* Add To Favourites Button */
 .add-to-favourites-btn {
   padding: 1rem 1rem;
   font-size: 1rem;
@@ -175,41 +191,50 @@ nav {
 /* Media Queries for Responsive Design */
 @media screen and (max-width: 450px) {
 
+  /* Navbar */
   nav {
     padding: 0 1rem;
   }
 
+  /* Navbar links container */
   .link {
     width: 6rem;
   }
 
+  /* Navbar logo */
   .fa-imdb {
     font-size: 48px;
   }
 
+  /* Navbar links */
   .link a {
     font-size: 14px;
   }
 
+  /* Search container */
   #search-box {
     width: 100%;
     margin-top: 4rem;
     padding: 0 1rem;
   }
 
+  /* Search input field */
   #search {
     font-size: 18px;
   }
 
+  /* Search logo */
   .fa-magnifying-glass {
     right: 6%;
   }
 
+  /* List of movies on search */
   #list-of-movies {
     width: 100%;
     height: 75vh;
   }
 
+  /* Individual movie info container */
   .movie-card {
     padding: 0.5rem 0.5rem;
   }
@@ -218,23 +243,28 @@ nav {
     gap: 0;
   }
 
+  /* Movie poster */
   .movie-card-img {
     align-self: center;
     transform: none;
   }
 
+  /* Movie text info container */
   .movie-card-name-year {
     padding: 0.5rem;
   }
 
+  /* Movie name */
   .movie-card-name {
     font-size: small;
   }
 
+  /* Movie year */
   .movie-card-year {
     font-size: x-small;
   }
 
+  /* Read More Button */
   .read-more-btn {
     width: 5rem;
     height: auto;
@@ -242,6 +272,7 @@ nav {
     font-size: 10px;
   }
 
+  /* Add To Favourites Button */
   .add-to-favourites-btn {
     padding: 0.5rem 0.5rem;
     font-size: 12px;
